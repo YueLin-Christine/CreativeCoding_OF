@@ -1,7 +1,7 @@
 # CreativeCoding_OF
 
 #Yue Lin
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](/img.jpg?raw=true "Optional Title")
 
 ###Brief Introduction
 * from China
