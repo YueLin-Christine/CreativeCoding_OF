@@ -1,7 +1,7 @@
 # CreativeCoding_OF
 
 #Yue Lin
-![Alt text](/image.jpg?raw=true "Optional Title")
+![Alt text](/image.jpg?raw=true "me")
 
 ###Brief Introduction
 * from China
