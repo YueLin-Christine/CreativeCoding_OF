@@ -1,9 +1,9 @@
 # CreativeCoding_OF
 
-#Yue Lin
+###Yue Lin
 ![Alt text](/image.jpg?raw=true "me")
 
-####Brief Introduction
+#####Brief Introduction
 * MFADA 1st year
 * From China
 * Background: UX/UI design, interaction design
