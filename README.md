@@ -4,6 +4,7 @@
 ![Alt text](/image.jpg?raw=true "me")
 
 ###Brief Introduction
-* from China
-* background: UX/UI design, interaction design
-* interests: interaction design, interactive installations, 
+* MFADA 1st year
+* From China
+* Background: UX/UI design, interaction design
+* Interests: interaction design, interactive installations
