@@ -1,7 +1,7 @@
 # CreativeCoding_OF
 
+![Alt text](/image.jpg?raw=true "yue")
 ###Yue Lin
-![Alt text](/image.jpg?raw=true "me")
 
 #####Brief Introduction
 * MFADA 1st year
