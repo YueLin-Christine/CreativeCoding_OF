@@ -25,6 +25,6 @@ class ofApp : public ofBaseApp{
     Alien scully;
     Alien booBoo;
     
-    vector <Alien> myAliens; // elastic erray to store objects in
+    vector <Alien> myAliens; // elastic array to store objects in
 		
 };
