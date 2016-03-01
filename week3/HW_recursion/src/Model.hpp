@@ -20,7 +20,8 @@ public:
     int posPX, posPY;
 //    int velX, velY;
     int h,s,b,a;
-    int diam;
+    int diam1;
+    int diam2;
     
     int length;
 
@@ -29,6 +30,6 @@ public:
     void setup(float x, float y);
     void update();
     void draw();
-    void drawBranch(float x, float y, float diam, float h, float s, float b);
+    void drawBranch(float x, float y, float diam1, float diam2, float h, float s, float b);
     
 };
