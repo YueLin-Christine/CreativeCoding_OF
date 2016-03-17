@@ -1,5 +1,8 @@
 #include "ofApp.h"
 
+//void ofApp::drawCircle(float theta){
+//    
+//}
 
 
 //--------------------------------------------------------------
@@ -10,12 +13,13 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-//    Circle.update();
+    Circle.update();
 
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+//    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
     Circle.draw();
 }
 

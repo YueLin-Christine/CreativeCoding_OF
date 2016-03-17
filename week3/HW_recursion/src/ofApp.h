@@ -22,8 +22,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
-//    void drawCircle(float x, float y, float diam);
     Model Circle;
-//    Model smallCircle;
+//    float theta;
+    void drawCircle(float theta);
+    
+
     
 };

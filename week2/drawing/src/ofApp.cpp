@@ -2,16 +2,16 @@
 
 void ofApp::diamond(ofPoint center, float width, float height){
     //line1
-    ofLine(center.x-width/2, center.y, center.x, center.y-height/2);
+    ofDrawLine(center.x-width/2, center.y, center.x, center.y-height/2);
     
     //line2
-    ofLine(center.x, center.y-height/2, center.x+width/2, center.y);
+    ofDrawLine(center.x, center.y-height/2, center.x+width/2, center.y);
     
     //line3
-    ofLine(center.x+width/2, center.y, center.x, center.y+height/2);
+    ofDrawLine(center.x+width/2, center.y, center.x, center.y+height/2);
     
     //line4
-    ofLine(center.x, center.y+height/2, center.x-width/2, center.y);
+    ofDrawLine(center.x, center.y+height/2, center.x-width/2, center.y);
     
 }
 
