@@ -19,6 +19,7 @@ Hexagon::Hexagon(){
     centerX = 0;
     centerY = 0;
     radius = 180;
+    theta = 0;
     r = 255;
     g = 255;
     b = 255;
@@ -37,8 +38,11 @@ void Hexagon::drawHexagon(float centerX, float centerY, float radius){
 void Hexagon::drawRotation(float radius, float theta){
     drawHexagon(centerX, centerY, radius);
     ofTranslate(0, 0);
-    radius = radius * 0.87;
-    if(radius > 1){
+
+//    radius = radius * 0.87;
+    theta = theta + 5 ;
+
+    if(theta < 90){
         ofPushMatrix();
         ofRotate(theta);
         drawRotation(radius, theta);

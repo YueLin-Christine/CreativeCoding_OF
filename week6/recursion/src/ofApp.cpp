@@ -5,7 +5,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetFrameRate(1);
+    ofSetFrameRate(30);
     ofSetBackgroundColor(0);
     
 
