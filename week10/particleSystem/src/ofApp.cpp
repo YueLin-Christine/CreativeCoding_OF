@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-//    ofSetBackgroundAuto(false);
+    ofSetBackgroundAuto(false);
     time0 = ofGetElapsedTimef();
     bornCount = 0;
     bornRate = 1500;

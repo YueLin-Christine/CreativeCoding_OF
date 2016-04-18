@@ -52,9 +52,11 @@ void Particle::draw(){
     if(live){
         float size = ofMap(time, 0, lifeTime, 1, 3);
         
-        ofColor color = ofColor::red;
+        ofColor color = ofColor::black;
         float hue = ofMap(time, 0, lifeTime, 120, 255);
         color.setHue(hue);
+//        float hex = ofMap(time, 0, lifeTime, 0, 128);
+//        color.setHex(hex);
         ofSetColor(color);
         
         ofDrawCircle(pos, size);
