@@ -24,8 +24,12 @@ ofPoint Particle::randomPointInCircle(float maxRad){
 }
 
 void Particle::setup(){
-    pos = param.eCenter + randomPointInCircle(param.eRad);
-    vel = randomPointInCircle(param.velRad);
+    param.setup();
+    particleParamGroup.add(param.parameters);
+
+    
+    pos = param.eCenter + randomPointInCircle(param.eRad);//?????
+    vel = randomPointInCircle(param.velRad);//?????
     time = 0;
     lifeTime = param.lifeTime;
     live = true;
@@ -34,10 +38,29 @@ void Particle::setup(){
 void Particle::update(float dt){ //dt stands of timestamp?
     if(live){
         //rotate velocity
-        vel.rotate(0,0, param.rotate * dt);
+        vel.rotate(0, 0, param.rotate * dt);
         
+        ofPoint acc;         //Acceleration
+        ofPoint delta = pos - param.eCenter;
+        
+        float len = delta.length();
+        if ( ofInRange( len, 0, param.eRad ) ) { // what does ofInRange do?
+            delta.normalize();
+            
+            //Attraction/repulsion force
+            acc += delta * param.force;
+            
+            //Spinning force
+            acc.x += -delta.y * param.spinning;
+            acc.y += delta.x * param.spinning;
+        }
+        
+        vel += acc * dt;            //Euler method
+        vel *= ( 1 - param.friction );  //Friction
+        
+                
         //update position
-        pos += vel * dt;
+        pos += vel * dt; //euler method
         
         //update time + check if the particle is going to die based on lifeTime
         time += dt;
@@ -50,19 +73,22 @@ void Particle::update(float dt){ //dt stands of timestamp?
 
 void Particle::draw(){
     if(live){
-        float size = ofMap(time, 0, lifeTime, 1, 3);
+//        float size = ofMap(time, 0, lifeTime, 3, 1);
+        float size = ofMap(fabs(time - lifeTime/2), 0, lifeTime/2, 3, 1); //what is fabs?
+        ofColor color = ofColor::red;
         
-        ofColor color = ofColor::black;
-        float hue = ofMap(time, 0, lifeTime, 120, 255);
+        float hue = ofMap(time, 0, lifeTime, 128, 255);
         color.setHue(hue);
+        
 //        float hex = ofMap(time, 0, lifeTime, 0, 128);
 //        color.setHex(hex);
+        
         ofSetColor(color);
         
         ofDrawCircle(pos, size);
         
-        
     }
+
 }
 
 

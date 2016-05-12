@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2290051B3775B9669A324D1F2251F76D0AE892B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2290051B3775B9669A324D1F2251F76D0AE892B1" : 0,
+    "7E804D925461714118DB355C65BC964B41D94376" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2F28313D-44D8-4123-BDEF-E1F9505ADD46",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2290051B3775B9669A324D1F2251F76D0AE892B1" : "CreativeCoding_OF\/",
+    "7E804D925461714118DB355C65BC964B41D94376" : "addons\/ofxUI\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "particleSystem",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "week10\/particleSystem\/particleSystem.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/YueLin-Christine\/CreativeCoding_OF",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2290051B3775B9669A324D1F2251F76D0AE892B1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rezaali\/ofxUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E804D925461714118DB355C65BC964B41D94376"
+    }
+  ]
+}

@@ -10,25 +10,41 @@
 #define Params_hpp
 
 #include <stdio.h>
+#include "ofParameterGroup.h"
+#include "ofParameter.h"
 #include "ofMain.h"
 //#include "Particle.hpp"
 
 
 class Params{
 public:
-    void setup(); // center of the emitter
-    ofPoint eCenter; //radius of emitter
-    float eRad; // radius of emitter
-    float velRad; //max velocity
-    float lifeTime; //max life
-    float rotate; //rotation amount
+    void setup();
+    ofPoint eCenter; // emitter center
     
-    //homework setup one forces
-    //add a GUI for it
-    float attraction;
-    float reposion;
-    float friction;
-    float spinning;
+//    float eRad; // emitter radius
+//    float velRad; //initial velocity limit
+//    float lifeTime; //lifetime in seconds
+//    float rotate; //Direction rotation speed in angles per second
+//    
+//    //homework setup one forces
+//    //add a GUI for it
+////    float attraction;
+////    float reposion;
+//    
+//    float force;
+//    float friction;
+//    float spinning;
+
+    ofParameterGroup parameters;
+    ofParameter<float> eRad;
+    ofParameter<float> velRad;
+    ofParameter<float> lifeTime;
+    ofParameter<float> rotate;
+    
+    ofParameter<float> force;
+    ofParameter<float> friction;
+    ofParameter<float> spinning;
+    
 };
 
 

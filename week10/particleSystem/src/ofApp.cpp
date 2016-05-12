@@ -2,11 +2,25 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetBackgroundAuto(false);
+    ofSetFrameRate(60);
+    ofBackground( 255, 255, 255 );
+    
+    gui.setup();
+    
+    //Allocate drawing buffer
+    int w = ofGetWidth();
+    int h = ofGetHeight();
+    fbo.allocate(w, h, GL_RGB32F_ARB);
+    
+    //Fill buffer with white color
+    fbo.begin();
+    ofBackground(255, 255, 255);
+    fbo.end();
+    history = 0.9; //controls the trails
+    
     time0 = ofGetElapsedTimef();
     bornCount = 0;
     bornRate = 1500;
-
 }
 
 //--------------------------------------------------------------
@@ -20,7 +34,6 @@ void ofApp::update(){
             p.erase(p.begin() + i);
         }
     }
-
     
     bornCount += dt *bornRate;
     if(bornCount>1){
@@ -30,7 +43,7 @@ void ofApp::update(){
             Particle newp;
             newp.param.setup();
             newp.setup();
-            p.push_back(newp);
+            p.push_back(newp);// add this particle to array
         }
     }
     for(int i = 0; i < p.size(); i++){
@@ -40,11 +53,30 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-//    p.draw();
+
+    fbo.begin();
+    ofEnableAlphaBlending();
+    
+    float alpha = (1-history) * 255;
+    ofSetColor( 255, 255, 255, alpha);
+    ofFill();
+    ofDrawRectangle( 0, 0, ofGetWidth(), ofGetHeight() );
+    
+    ofDisableAlphaBlending();
+    
+
+    
+    ofFill();
     for(int i = 0; i< p.size(); i++){
         p[i].draw();
-        
     }
+
+ 
+    fbo.end();
+    ofSetColor( 255, 255, 255 );
+    fbo.draw( 0, 0 );
+    
+    gui.draw();
 }
 
 //--------------------------------------------------------------
