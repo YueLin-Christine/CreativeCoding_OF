@@ -6,7 +6,7 @@
 void ofApp::setup(){
     ofEnableDepthTest();
     
-    sound.loadSound("ObfuscAmateurCartography.mp3");
+    sound.loadSound("ObfuscAmateurCartography.mp3"); //Music is Obfusc's Amateur Cartography from Game Monument Valley
     sound.setLoop( true );
     sound.play();
 
@@ -15,10 +15,7 @@ void ofApp::setup(){
     time0 = ofGetElapsedTimef();
     
     bornCount = 0.9;
-    bornRate = 800;
-    
-//    bornCount = 0.9;
-//    bornRate = 1600;
+    bornRate = 200;
     
     leap.setup();
 }
@@ -50,14 +47,14 @@ void ofApp::update(){
             newp1.setup();
             p.push_back(newp1);
             
-//            newp2.param.setup(leap.tipGlobal2.x, leap.tipGlobal2.y, leap.tipGlobal2.z);
-//            newp2.setup();
-//            p.push_back(newp2);
+            newp2.param.setup(leap.tipGlobal2.x, leap.tipGlobal2.y, leap.tipGlobal2.z);
+            newp2.setup();
+            p.push_back(newp2);
+            
+            newp3.param.setup(leap.tipGlobal3.x, leap.tipGlobal3.y, leap.tipGlobal3.z);
+            newp3.setup();
+            p.push_back(newp3);
 //            
-//            newp3.param.setup(leap.tipGlobal3.x, leap.tipGlobal3.y, leap.tipGlobal3.z);
-//            newp3.setup();
-//            p.push_back(newp3);
-////            
 //            newp4.param.setup(leap.tipGlobal1.x, leap.tipGlobal1.y, leap.tipGlobal1.z);
 //            newp4.setup();
 //            p.push_back(newp);
